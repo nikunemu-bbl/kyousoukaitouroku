@@ -1,0 +1,211 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 30px 16px;
+    font-family: sans-serif;
+    background-color: #f2f4f7;
+    color: #222;
+}
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+header h1 {
+    color: #24364b;
+    font-size: 28px;
+}
+header p {
+    color: #666;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+.card h2 {
+    margin-top: 0;
+    color: #24364b;
+}
+#playerData {
+    width: 100%;
+    min-height: 280px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    resize: vertical;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    background: white;
+}
+#playerData:focus {
+    outline: none;
+    border-color: #426b91;
+}
+#playerData:empty::before {
+    content: attr(data-placeholder);
+    color: #999;
+}
+.note {
+    margin-top: 12px;
+    color: #777;
+    font-size: 13px;
+}
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #888;
+    font-size: 12px;
+}
+button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #24364b;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #426b91;
+}
+#result {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    overflow-wrap: anywhere;
+}
+/* 選考結果の基本デザイン */
+.result-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.result-header h2 {
+    color: #24364b;
+}
+.result-header h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+/* 受賞資格 */
+.eligibility-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.eligibility-box strong {
+    font-size: 20px;
+}
+.eligible {
+    background: #e5f5eb;
+    color: #247344;
+    border: 1px solid #a8d9b8;
+}
+.ineligible {
+    background: #fce9e9;
+    color: #b83232;
+    border: 1px solid #e6b0b0;
+}
+/* ランク表示 */
+.rank-box {
+    text-align: center;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+.rank-box p {
+    margin: 0;
+    font-weight: bold;
+}
+.rank-box h2 {
+    font-size: 32px;
+    margin: 8px 0;
+}
+.total-score {
+    font-size: 42px;
+    font-weight: bold;
+}
+.total-score small {
+    font-size: 18px;
+}
+/* 金・銀・銅 */
+.gold {
+    background: #fff4cc;
+    color: #9b7100;
+    border: 2px solid #d9ad32;
+}
+.silver {
+    background: #edf0f4;
+    color: #596575;
+    border: 2px solid #aeb8c5;
+}
+.bronze {
+    background: #f8e5d9;
+    color: #99552e;
+    border: 2px solid #c78b64;
+}
+.unranked {
+    background: #f0f0f0;
+    color: #666;
+    border: 2px solid #ccc;
+}
+/* ポイント内訳 */
+.section-title {
+    color: #24364b;
+    border-bottom: 2px solid #dce2e8;
+    padding-bottom: 8px;
+}
+.score-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.score-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 15px;
+    background: #f5f7fa;
+    border-radius: 8px;
+}
+.score-item strong {
+    color: #24364b;
+    font-size: 16px;
+}
+/* 選手情報 */
+.player-info {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+    color: #666;
+}
+.player-info h3 {
+    color: #24364b;
+}
+/* スマートフォン対応 */
+@media (max-width: 480px) {
+    .score-item {
+        grid-template-columns: 1fr auto;
+    }
+    .score-item span:nth-child(2) {
+        display: none;
+    }
+    .total-score {
+        font-size: 36px;
+    }
+}

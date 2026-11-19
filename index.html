@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symphonia Award App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>響奏会</h1>
+        <p>選手表彰・成績管理システム</p>
+    </header>
+    <main class="container">
+        <section class="card">
+            <h2>選手情報の入力</h2>
+            <p>
+                BBLからコピーした選手情報を以下の欄に貼り付けてください。
+            </p>
+            <div
+                id="playerData"
+                contenteditable="true"
+                data-placeholder="ここに選手情報を貼り付けてください..."
+            ></div>
+            <button onclick="analyzePlayer()">
+                選考ポイントを計算する
+            </button>
+            <div id="result"></div>
+            <p class="note">
+                ※投手・野手どちらのデータにも対応しています。
+            </p>
+        </section>
+    </main>
+    <footer>
+        Symphonia Award App
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
